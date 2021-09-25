@@ -28,7 +28,7 @@ let discuter = {
     sourire en coin :
     - Tu es bien prudente, mais nous ferons connaissance bientôt...
     et disparaît aussi soudainement qu'il est arrivé.`,
-  img: "",
+  img: "images/steven_prudence.png",
 };
 
 let chaptersObj = {
