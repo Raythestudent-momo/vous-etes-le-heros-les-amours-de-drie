@@ -1,8 +1,7 @@
 let reveil = {
   subtitle: "réveil",
   text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
-  Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.
-  Que faites-vous?`,
+  Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
   img: "images/steven_reveil.png",
 };
 
@@ -31,8 +30,55 @@ let discuter = {
   img: "images/steven_prudence.png",
 };
 
+let meurtre = {
+  subtitle: "Rencontre forcée",
+  text: `Après plusieurs heures de marche, vous arrivez près
+  d'un terrain d'entraînement. Steven vous pointe un homme au
+  loin et vous remet un couteau. Vous allez à la
+  rencontre de l'homme, qui vous accueuille chaleureusement.`,
+  img: "images/geordo_meet.jpg",
+};
+
+let poignarder = {
+  subtitle: "À en perdre la tête!",
+  text: `Vous tentez d'assassiner Geordo, mais à la seconde où
+  vous sortez votre couteau, le sourire du prince disparaît et
+  vous voyez soudainement le monde tourner. Votre tête touche le
+  sol avant que vous vous rendiez compte de votre mort.`,
+  img: "images/geordo_murder.jpg",
+};
+
+let fauxflirt = {
+  subtitle: "Une décision déchirante",
+  text: `Quelques mois plus tard, après tombé sous le charme l'un de l'autre,
+  vous croisez Steven qui vous rapelle votre travail. Un peu plus tard, vous 
+  vous dirigez vous la demeure de Geordo le coeur lourd.`,
+  img: "images/fake_flirt.jpg",
+};
+
+let opportunite = {
+  subtitle: "Une opportunité se présente",
+  text: `Aussitôt arrivé chez Geordo, il vous accueuille en vous enlaçant et
+  vous déclare son amour. Vous sentez un poids vous envahir alors que vous sentez
+  le couteau contre votre cuisse, à portée de main.`,
+  img: "images/opportunity.jpg",
+};
+
+let jalousie = {
+  subtitle: "suivre son coeur jusqu'au bout",
+  text: `Vous acceptez son amour et passez une superbe soirée romantique. Alors
+  que vous dormez à la belle étoile, enlacés, Steven sort de l'ombre. Avec un sourire
+  machiavélique, ils vous poignarde tout les deux et disparaît dans la nuit en riant.`,
+  img: "images/jealousy.jpg",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
   insult: insulter,
+  discuss: discuter,
+  geordo_meet: meurtre,
+  geordo_murder: poignarder,
+  fake_flirt: fauxflirt,
+  steven_jealousy: jalousie,
 };
