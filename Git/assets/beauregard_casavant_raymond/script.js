@@ -72,6 +72,14 @@ let jalousie = {
   img: "images/jealousy.jpg",
 };
 
+let geordeath1 = {
+  subtitle: "méfait accompli!",
+  text: `Les larmes aux yeux mais d'un mouvement fluide, vous prenez le couteau et transpercez la gorge
+  du prince. Il s'écroule, serrant votre main et son regard laisse une étincelle de désespoir
+  avant de s'éteindre à jamais.`,
+  img: "images/stab.png",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
