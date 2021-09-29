@@ -1,12 +1,12 @@
 let reveil = {
-  subtitle: "réveil",
+  subtitle: "Réveil",
   text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
   Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
   img: "images/steven_reveil.png",
 };
 
 let slave = {
-  subtitle: "réduit/e en esclavage!",
+  subtitle: "Réduit/e en esclavage!",
   text: `Totalement immunisé contre votre charme, Steven vous attrape par la gorge 
     et vous fait perdre connaissance. Vous vous réveillez dans une cage, menottes
     aux poignets et aux pieds, en route vers un marché d'esclaves.`,
@@ -14,7 +14,7 @@ let slave = {
 };
 
 let insulter = {
-  subtitle: "sauvé par l'audace",
+  subtitle: "Sauvé par l'audace",
   text: `Face à votre audace, Steven vous enrôle pour assassiner un prince 
   d'une région avoisinante. En souriant, il vous pointe la voie à suivre
   du bout de son couteau.`,
@@ -22,7 +22,7 @@ let insulter = {
 };
 
 let discuter = {
-  subtitle: "la prudence est de mise...",
+  subtitle: "La prudence est de mise...",
   text: `Vous demandez qui il est. Steven soupire et répond avec un 
     sourire en coin :
     - Tu es bien prudente, mais nous ferons connaissance bientôt...
@@ -65,7 +65,7 @@ let opportunite = {
 };
 
 let jalousie = {
-  subtitle: "suivre son coeur jusqu'au bout",
+  subtitle: "Suivre son coeur jusqu'au bout",
   text: `Vous acceptez son amour et passez une superbe soirée romantique. Alors
   que vous dormez à la belle étoile, enlacés, Steven sort de l'ombre. Avec un sourire
   machiavélique, ils vous poignarde tout les deux et disparaît dans la nuit en riant.`,
@@ -73,7 +73,7 @@ let jalousie = {
 };
 
 let geordeath1 = {
-  subtitle: "méfait accompli!",
+  subtitle: "Méfait accompli!",
   text: `Les larmes aux yeux mais d'un mouvement fluide, vous prenez le couteau et transpercez la gorge
   du prince. Il s'écroule, serrant votre main et son regard laisse une étincelle de désespoir
   avant de s'éteindre à jamais.`,
@@ -81,7 +81,7 @@ let geordeath1 = {
 };
 
 let cruelRefuse = {
-  subtitle: "un coeur déchiré",
+  subtitle: "Un coeur déchiré",
   text: `Vous le repoussez et lui répondez que vous ne l'avez jamais aimé. Sous le choc, Geordo se retourne
   en silence et marche lentement vers la cuisine. Vous entendez un bruit sourd de corps qui tombe. Avec un
   sourire en coin et une larme à l'oeil, vous sortez rejoindre Steven qui vous attend plus loin.`,
@@ -109,6 +109,10 @@ let arracher = {
   text: `Vous repoussez Steven. D'un mouvement fluide, il vous transperce la poitrine et retire votre coeur,
   pleurant à chaudes larmes, pour vous exprimer sa souffrance.`,
   img: "images/steven_sadness",
+};
+
+let keith = {
+  subtitle: "",
 };
 
 let chaptersObj = {
