@@ -80,6 +80,37 @@ let geordeath1 = {
   img: "images/stab.png",
 };
 
+let cruelRefuse = {
+  subtitle: "un coeur déchiré",
+  text: `Vous le repoussez et lui répondez que vous ne l'avez jamais aimé. Sous le choc, Geordo se retourne
+  en silence et marche lentement vers la cuisine. Vous entendez un bruit sourd de corps qui tombe. Avec un
+  sourire en coin et une larme à l'oeil, vous sortez rejoindre Steven qui vous attend plus loin.`,
+  img: "images/geordo_suicide.png",
+};
+
+let loveSteven = {
+  subtitle: "une étrange déclaration",
+  text: `Vous marchez avec Steven pendant un moment. Vous arrivez dans une clairière qui a un air familier.
+  Steven vous félicite, admiratif de votre cruauté envers Geordo, et vous demande de passer le restant de
+  votre vie à ses côtés.`,
+  img: "images/wierd_love.jpg",
+  options: [],
+};
+
+let finSteven = {
+  subtitle: "une vie de folie!",
+  text: `Vous prenez Steven dans vos bras et vous l'enlacez. Vous vous sauvez ensemble dans la nuit. Pour le
+  reste de votre vie, vous et Steven parcourez le monde à la recherche de cibles à manipuler et assassiner.`,
+  img: "images/ending_steven.jpg",
+};
+
+let arracher = {
+  subtitle: "une peine déchirante!",
+  text: `Vous repoussez Steven. D'un mouvement fluide, il vous transperce la poitrine et retire votre coeur,
+  pleurant à chaudes larmes, pour vous exprimer sa souffrance.`,
+  img: "images/steven_sadness",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
@@ -89,4 +120,9 @@ let chaptersObj = {
   geordo_murder: poignarder,
   fake_flirt: fauxflirt,
   steven_jealousy: jalousie,
+  geordo_death_1: geordeath1,
+  geordo_suicide: cruelRefuse,
+  wierd_love: loveSteven,
+  ending_steven: finSteven,
+  steven_sadness: arracher,
 };
