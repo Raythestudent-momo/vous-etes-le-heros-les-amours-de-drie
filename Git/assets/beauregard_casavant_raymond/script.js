@@ -3,6 +3,7 @@ let reveil = {
   text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
   Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
   img: "images/steven_reveil.png",
+  options: [],
 };
 
 let slave = {
@@ -208,6 +209,15 @@ let friendzone = {
   img: "images/geordo_ending.jpg",
 };
 
+let ending = {
+  subtitle: "D'une pierre deux coups!",
+  text: `Vous tombez amoureux tous les trois et formez une alliance entre les deux régions,
+  devenant le premier trouple royal. Vous vivez heureux jusqu'à la fin de vos jours.
+  
+  Merci d'avoir joué à mon jeu! :)`,
+  img: "images/final_ending.png",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
@@ -234,4 +244,11 @@ let chaptersObj = {
   got_help: seekHelp,
   thankful: thanks,
   geordo_ending: friendzone,
+  final_ending: ending,
 };
+
+function gotochapter(chapterName) {
+  const chapitre = chapterName;
+  console.log(chapitre.subtitle);
+  console.log(chapitre.text);
+}
