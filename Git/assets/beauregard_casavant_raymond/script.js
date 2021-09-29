@@ -112,7 +112,42 @@ let arracher = {
 };
 
 let keith = {
-  subtitle: "",
+  subtitle: "Un nouvel ami",
+  text: `Steven vous ayant aidé à faire disparaitre les traces, vous ne vous faite pas prendre
+  pour le meurtre et votre "employeur" vous a enfin laissé tranquille. Entretemps, vous changez 
+  de région pour vous faire oublier et vous vous liez d'amitié avec un ami de Geordo, Keith.`,
+  img: "images/new_friend.png",
+};
+
+let keithLove = {
+  subtitle: "En amour de nouveau",
+  text: `Après quelques temps, vous et Keith tombez en amour et vous invite à un banquet dans
+  la région que vous venez de quitter. Vous hésitez, mais acceptez l'invitation avec un sourire forcé.`,
+  img: "images/keith_love.png",
+};
+
+let truthLie = {
+  subtitle: "Face à un dilemme",
+  text: `Au banquet, ce que vous craignez arrive: Keith vous prend soudainement à part. Il vous révèle
+  que son ami d'enfance, Geordo, a été assassiné. Sachant que vous venez de cette région, il vous demande
+  votre aide pour résoudre ce crime.`,
+  img: "images/dilemma.jpg",
+};
+
+let truth = {
+  subtitle: "La parole est d'argent, mais le silence est d'or",
+  text: `Vous dites la vérité. Keith, écoutant vos aveux, tire lentement son épée de son fourreau
+  et vous écoute jusqu'à la fin. Finalement, avec un soupir sanglotant de rage, il vous exécute
+  brutalement sans procès.`,
+  img: "images/brutal_death.jpg",
+};
+
+let lie = {
+  subtitle: "Vivre dans le mensonge",
+  text: `Vous dites que vous ne savez rien à ce sujet. Pendant plusieurs années, Keith tente
+  de retrouver le responsable de la mort de son ami, mais en vain. Il se résigne à espérer et
+  profite de quelques années supplémentaires à vos côtés jusqu'à ce qu'il parte visiter un pays lointain.`,
+  img: "images/bad_keith_ending.jpg",
 };
 
 let chaptersObj = {
@@ -129,4 +164,9 @@ let chaptersObj = {
   wierd_love: loveSteven,
   ending_steven: finSteven,
   steven_sadness: arracher,
+  new_friend: keith,
+  keith_love: keithLove,
+  dilemma: truthLie,
+  brutal_death: truth,
+  bad_keith_ending: lie,
 };
