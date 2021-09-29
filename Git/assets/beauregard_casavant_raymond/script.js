@@ -114,7 +114,7 @@ let arracher = {
 let keith = {
   subtitle: "Un nouvel ami",
   text: `Steven vous ayant aidé à faire disparaitre les traces, vous ne vous faite pas prendre
-  pour le meurtre et votre "employeur" vous a enfin laissé tranquille. Entretemps, vous changez 
+  pour le meurtre et il vous a enfin laissé tranquille. Entretemps, vous changez 
   de région pour vous faire oublier et vous vous liez d'amitié avec un ami de Geordo, Keith.`,
   img: "images/new_friend.png",
 };
@@ -175,6 +175,39 @@ let defend = {
   img: "images/human_shield.jpg",
 };
 
+let geordeath2 = {
+  subtitle: "Inaction",
+  text: `Vous ne bougez pas d'un pouce, guettant la suite. Steven prend rapidement l'avantage et transperce
+  le coeur de Geordo. Il tombe à genoux, vous regarde d'un regard suppliant et s'effondre sur le sol, sans vie.
+  Steven vous remercie de votre coopération et emporte le corps dans la fôret. Vous fuyez la scène paniqué/e.`,
+  img: "images/run_away.jpg",
+};
+
+let seekHelp = {
+  subtitle: "À l'aide!",
+  text: `Vous courez vers la forêt en appelant à l'aide. Après peu de temps, un homme vient à votre secours.
+  Vous le guidez jusqu'au terrain d'entraînement, où Geordo semble en difficulté face à Steven. L'inconnu
+  fonce vers l'agresseur, l'épée à la main, en hurlant de rage. Le combat se termine rapidement avec l'aide
+  que vous avez apporté. Steven tombe au sol, couvert de blessures et lâche un dernier cri de désespoir
+  avant de rendre l'âme.`,
+  img: "images/got_help.jpg",
+};
+
+let thanks = {
+  subtitle: "Un ami d'enfance",
+  text: `L'inconnu s'approche de vous et se présente. Il s'apelle Keith et est un ami d'enfance de Geordo
+  ainsi qu'un prince de la région voisine. Après s'être présenté, ce dernier vous offre ses remerciements.
+  Vous discutez pendant de longues heures.`,
+  img: "images/thankful.jpg",
+};
+
+let friendzone = {
+  subtitle: "Un amour princier",
+  text: `Pendant les mois qui suivent, vous et Geordo tombez amoureux. Vous vous mariez avec le prince
+  et passez le restant de vos jours à apprécier votre nouvelle vie de couple royal.`,
+  img: "images/geordo_ending.jpg",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
@@ -197,4 +230,8 @@ let chaptersObj = {
   house_burning: stevenAlive,
   geordo_fight: stevenAttack,
   human_shield: defend,
+  run_away: geordeath2,
+  got_help: seekHelp,
+  thankful: thanks,
+  geordo_ending: friendzone,
 };
