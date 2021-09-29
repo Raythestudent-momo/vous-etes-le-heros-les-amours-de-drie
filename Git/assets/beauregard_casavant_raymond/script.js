@@ -150,6 +150,31 @@ let lie = {
   img: "images/bad_keith_ending.jpg",
 };
 
+let stevenAlive = {
+  subtitle: "Trop beau pour être vrai",
+  text: `Alors que Keith est parti, vous prenez soin de sa demeure et vaquez à vos occupations.
+  À un moment, vous préparez votre souper et votre four explose soudainement, vous tuant sur le coup.
+  Étrangement, votre corps n'est jamais retrouvé.`,
+  img: "images/house_burning.jpg",
+};
+
+let stevenAttack = {
+  subtitle: "Attaque surprise!",
+  text: `Vous poursuivez votre chemin dans la forêt. Vous arrivez éventuellement à un terrain d'entraînement
+  où un homme vous accueuille chaleureusement. L'homme se prénomme Geordo et est le prince de la région.
+  Après avoir discuté un moment, vous remarquez des mouvements dans le boisé proche. Tout à coup, Steven
+  sort de la forêt et attaque Geordo.`,
+  img: "images/geordo_fight.jpg",
+};
+
+let defend = {
+  subtitle: "Sacrifice",
+  text: `Vous vous portez au secours de Geordo, vous mettant entre ce dernier et Steven. Il vous poignarde
+  rapidement à plusieurs reprises et vous vous écroulez au sol. Vous voyez le prince profiter de l'ouverture
+  pour vaincre l'agresseur avant de laisser s'échapper un dernier soupir.`,
+  img: "images/human_shield.jpg",
+};
+
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
@@ -169,4 +194,7 @@ let chaptersObj = {
   dilemma: truthLie,
   brutal_death: truth,
   bad_keith_ending: lie,
+  house_burning: stevenAlive,
+  geordo_fight: stevenAttack,
+  human_shield: defend,
 };
