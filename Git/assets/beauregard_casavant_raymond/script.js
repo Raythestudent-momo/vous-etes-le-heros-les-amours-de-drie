@@ -381,7 +381,7 @@ let ending = {
   img: "images/final_ending.png",
 };
 
-let chaptersObj = {
+/*let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
   insult: insulte,
@@ -409,13 +409,11 @@ let chaptersObj = {
   thankful: thanks,
   geordo_ending: friendzone,
   final_ending: ending,
-};
+};*/
 
 function gotochapter(chapterName) {
-  const chapitre = chapterName;
-  console.log(chapitre.subtitle);
-  console.log(chapitre.text);
-  console.log(chapitre.img);
-  console.log(chapitre.options);
+  console.log(chapterName.subtitle);
+  console.log(chapterName.text);
+  console.log(chapterName.img);
+  console.log(chapterName.options);
 }
-gotochapter(reveil);
