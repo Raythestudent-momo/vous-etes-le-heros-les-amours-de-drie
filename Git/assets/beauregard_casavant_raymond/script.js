@@ -17,14 +17,7 @@ let chaptersObj = {
     {
       text: "insulter",
       action: "gotochapter(`insult`)",
-    },
-  ],
-  
-  },
-
-  /*continuer1: {
-    text: "continuer",
-    action: "gotochapter(reveil)",
+    },],
   },
 
   slave: {
@@ -33,12 +26,11 @@ let chaptersObj = {
       et vous fait perdre connaissance. Vous vous réveillez dans une cage, menottes
       aux poignets et aux pieds, en route vers un marché d'esclaves.`,
     img: "images/slave_ending.png",
-    options: [continuer1],
-  },
-
-  continuer3: {
-    text: "continuer",
-    action: "gotochapter(geordo_meet)",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   insulte: {
@@ -47,12 +39,11 @@ let chaptersObj = {
     d'une région avoisinante. En souriant, il vous pointe la voie à suivre
     du bout de son couteau.`,
     img: "images/steven_2.jpg",
-    options: [continuer3],
-  },
-
-  continuer2: {
+    options: [
+      {
     text: "continuer",
-    action: "gotochapter(geordo_fight)",
+    action: "gotochapter(geordo_meet)",
+  },],
   },
 
   discuter: {
@@ -62,17 +53,11 @@ let chaptersObj = {
       - Tu es bien prudente, mais nous ferons connaissance bientôt...
       et disparaît aussi soudainement qu'il est arrivé.`,
     img: "images/steven_prudence.png",
-    options: [continuer2],
-  },
-
-  flirter2: {
-    text: "flirter",
-    action: "gotochapter(fake_flirt)",
-  },
-
-  assassiner: {
-    text: "assassiner",
-    action: "gotochapter(geordo_murder)",
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(geordo_fight)",
+  },],
   },
 
   meurtre: {
@@ -82,7 +67,15 @@ let chaptersObj = {
     loin et vous remet un couteau. Vous allez à la
     rencontre de l'homme, qui vous accueuille chaleureusement.`,
     img: "images/geordo_meet.jpg",
-    options: [flirter2, assassiner],
+    options: [
+      {
+    text: "flirter",
+    action: "gotochapter(fake_flirt)",
+  },
+   {
+    text: "assassiner",
+    action: "gotochapter(geordo_murder)",
+  },],
   },
 
   poignarde: {
@@ -92,12 +85,11 @@ let chaptersObj = {
     vous voyez soudainement le monde tourner. Votre tête touche le
     sol avant que vous vous rendiez compte de votre mort.`,
     img: "images/geordo_murder.jpg",
-    options: [continuer1],
-  },
-
-  continuer4: {
-    text: "continuer",
-    action: "gotochapter(opportunity)",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   fauxflirt: {
@@ -106,22 +98,11 @@ let chaptersObj = {
     vous croisez Steven qui vous rapelle votre travail. Un peu plus tard, vous 
     vous dirigez vous la demeure de Geordo le coeur lourd.`,
     img: "images/fake_flirt.jpg",
-    options: [continuer4],
-  },
-
-  poignarder: {
-    text: "poignarder",
-    action: "gotochapter(geordo_death_1)",
-  },
-
-  noLove: {
-    text: "le rejeter",
-    action: "gotochapter(geordo_suicide)",
-  },
-
-  Love1: {
-    text: "aimer en retour",
-    action: "gotochapter(steven_jealousy)",
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(opportunity)",
+  },],
   },
 
   opportunite: {
@@ -130,10 +111,22 @@ let chaptersObj = {
     vous déclare son amour. Vous sentez un poids vous envahir alors que vous sentez
     le couteau contre votre cuisse, à portée de main.`,
     img: "images/opportunity.jpg",
-    options: [poignarder, noLove, Love1],
+    options: [
+      {
+    text: "poignarder",
+    action: "gotochapter(geordo_death_1)",
+  }, 
+  {
+    text: "le rejeter",
+    action: "gotochapter(geordo_suicide)",
+  }, 
+  {
+    text: "aimer en retour",
+    action: "gotochapter(steven_jealousy)",
+  },],
   },
 
-  jalousie: {
+  /*jalousie: {
     subtitle: "Suivre son coeur jusqu'au bout",
     text: `Vous acceptez son amour et passez une superbe soirée romantique. Alors
     que vous dormez à la belle étoile, enlacés, Steven sort de l'ombre. Avec un sourire
@@ -389,4 +382,4 @@ function gotochapter(chapterName) {
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].options);
 }
-gotochapter("reveil");
+
