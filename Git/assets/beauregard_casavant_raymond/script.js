@@ -1,9 +1,29 @@
+let flirter = {
+  text: "flirter",
+  action: "gotochapter(slave_ending)",
+};
+
+let insulter = {
+  text: "insulter",
+  action: "gotochapter(insult)",
+};
+
+let faireConnaissance = {
+  text: "faire connaissance",
+  action: "gotochapter(discuss)",
+};
+
 let reveil = {
   subtitle: "Réveil",
   text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
   Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
   img: "images/steven_reveil.png",
-  options: [],
+  options: [flirter, insulter, faireConnaissance],
+};
+
+let continuer1 = {
+  text: "continuer",
+  action: "gotochapter(reveil)",
 };
 
 let slave = {
@@ -12,14 +32,26 @@ let slave = {
     et vous fait perdre connaissance. Vous vous réveillez dans une cage, menottes
     aux poignets et aux pieds, en route vers un marché d'esclaves.`,
   img: "images/slave_ending.png",
+  options: [continuer1],
 };
 
-let insulter = {
+let continuer3 = {
+  text: "continuer",
+  action: "gotochapter(geordo_meet)",
+};
+
+let insulte = {
   subtitle: "Sauvé par l'audace",
   text: `Face à votre audace, Steven vous enrôle pour assassiner un prince 
   d'une région avoisinante. En souriant, il vous pointe la voie à suivre
   du bout de son couteau.`,
   img: "images/steven_2.jpg",
+  options: [continuer3],
+};
+
+let continuer2 = {
+  text: "continuer",
+  action: "gotochapter(geordo_fight)",
 };
 
 let discuter = {
@@ -29,6 +61,17 @@ let discuter = {
     - Tu es bien prudente, mais nous ferons connaissance bientôt...
     et disparaît aussi soudainement qu'il est arrivé.`,
   img: "images/steven_prudence.png",
+  options: [continuer2],
+};
+
+let flirter2 = {
+  text: "flirter",
+  action: "gotochapter(fake_flirt)",
+};
+
+let assassiner = {
+  text: "assassiner",
+  action: "gotochapter(geordo_murder)",
 };
 
 let meurtre = {
@@ -38,6 +81,7 @@ let meurtre = {
   loin et vous remet un couteau. Vous allez à la
   rencontre de l'homme, qui vous accueuille chaleureusement.`,
   img: "images/geordo_meet.jpg",
+  options: [flirter2, assassiner],
 };
 
 let poignarder = {
@@ -221,7 +265,7 @@ let ending = {
 let chaptersObj = {
   le_reveil: reveil,
   slave_ending: slave,
-  insult: insulter,
+  insult: insulte,
   discuss: discuter,
   geordo_meet: meurtre,
   geordo_murder: poignarder,
