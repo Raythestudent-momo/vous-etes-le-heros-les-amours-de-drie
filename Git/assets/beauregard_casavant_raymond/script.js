@@ -126,18 +126,17 @@ let chaptersObj = {
   },],
   },
 
-  /*jalousie: {
+  jalousie: {
     subtitle: "Suivre son coeur jusqu'au bout",
     text: `Vous acceptez son amour et passez une superbe soirée romantique. Alors
     que vous dormez à la belle étoile, enlacés, Steven sort de l'ombre. Avec un sourire
     machiavélique, ils vous poignarde tout les deux et disparaît dans la nuit en riant.`,
     img: "images/jealousy.jpg",
-    options: [continuer1],
-  },
-
-  continuer5: {
-    text: "continuer",
-    action: "gotochapter(new_friend)",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   geordeath1: {
@@ -146,12 +145,11 @@ let chaptersObj = {
     du prince. Il s'écroule, serrant votre main et son regard laisse une étincelle de désespoir
     avant de s'éteindre à jamais.`,
     img: "images/stab.png",
-    options: [continuer5],
-  },
-
-  continuer6: {
+    options: [
+      {
     text: "continuer",
-    action: "gotochapter(weird_love)",
+    action: "gotochapter(new_friend)",
+  },],
   },
 
   cruelRefuse: {
@@ -160,17 +158,11 @@ let chaptersObj = {
     en silence et marche lentement vers la cuisine. Vous entendez un bruit sourd de corps qui tombe. Avec un
     sourire en coin et une larme à l'oeil, vous sortez rejoindre Steven qui vous attend plus loin.`,
     img: "images/geordo_suicide.png",
-    options: [continuer6],
-  },
-
-  noLove2: {
-    text: "rejeter",
-    action: "gotochapter(steven_sadness)",
-  },
-
-  Love2: {
-    txt: "aimer en retour",
-    action: "gotochapter(ending_steven)",
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(weird_love)",
+  },],
   },
 
   loveSteven: {
@@ -179,12 +171,15 @@ let chaptersObj = {
     Steven vous félicite, admiratif de votre cruauté envers Geordo, et vous demande de passer le restant de
     votre vie à ses côtés.`,
     img: "images/wierd_love.jpg",
-    options: [noLove2, Love2],
-  },
-
-  recommencer: {
-    text: "recommencer?",
-    action: "gotochapter(reveil)",
+    options: [
+      {
+    text: "rejeter",
+    action: "gotochapter(steven_sadness)",
+  }, 
+  {
+    txt: "aimer en retour",
+    action: "gotochapter(ending_steven)",
+  },],
   },
 
   finSteven: {
@@ -192,7 +187,11 @@ let chaptersObj = {
     text: `Vous prenez Steven dans vos bras et vous l'enlacez. Vous vous sauvez ensemble dans la nuit. Pour le
     reste de votre vie, vous et Steven parcourez le monde à la recherche de cibles à manipuler et assassiner.`,
     img: "images/ending_steven.jpg",
-    options: [recommencer],
+    options: [
+      {
+    text: "recommencer?",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   arracher: {
@@ -200,12 +199,11 @@ let chaptersObj = {
     text: `Vous repoussez Steven. D'un mouvement fluide, il vous transperce la poitrine et retire votre coeur,
     pleurant à chaudes larmes, pour vous exprimer sa souffrance.`,
     img: "images/steven_sadness",
-    options: [continuer1],
-  },
-
-  continuer7: {
-    text: "continuer",
-    action: "gotochapter(keith_love)",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   keith: {
@@ -214,30 +212,23 @@ let chaptersObj = {
     pour le meurtre et il vous a enfin laissé tranquille. Entretemps, vous changez 
     de région pour vous faire oublier et vous vous liez d'amitié avec un ami de Geordo, Keith.`,
     img: "images/new_friend.png",
-    options: [continuer7],
-  },
-
-  continuer8: {
+    options: [
+      {
     text: "continuer",
-    action: "gotochapter(dilemma)",
-  },
+    action: "gotochapter(keith_love)",
+  },],
+  }, 
 
   keithLove: {
     subtitle: "En amour de nouveau",
     text: `Après quelques temps, vous et Keith tombez en amour et vous invite à un banquet dans
     la région que vous venez de quitter. Vous hésitez, mais acceptez l'invitation avec un sourire forcé.`,
     img: "images/keith_love.png",
-    options: [continuer8],
-  },
-
-  avouer: {
-    text: "avouer",
-    action: "gotochapter(brutal_death)",
-  },
-
-  mentir: {
-    text: "mentir",
-    action: "gotochapter(bad_keith_ending)",
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(dilemma)",
+  },],
   },
 
   truthLie: {
@@ -246,7 +237,15 @@ let chaptersObj = {
     que son ami d'enfance, Geordo, a été assassiné. Sachant que vous venez de cette région, il vous demande
     votre aide pour résoudre ce crime.`,
     img: "images/dilemma.jpg",
-    options: [avouer, mentir],
+    options: [
+      {
+    text: "avouer",
+    action: "gotochapter(brutal_death)",
+  }, 
+  {
+    text: "mentir",
+    action: "gotochapter(bad_keith_ending)",
+  },],
   },
 
   truth: {
@@ -255,12 +254,11 @@ let chaptersObj = {
     et vous écoute jusqu'à la fin. Finalement, avec un soupir sanglotant de rage, il vous exécute
     brutalement sans procès.`,
     img: "images/brutal_death.jpg",
-    options: [continuer1],
-  },
-
-  continuer9: {
-    text: "continuer",
-    action: "gotochapter(house_burning)",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   lie: {
@@ -269,7 +267,11 @@ let chaptersObj = {
     de retrouver le responsable de la mort de son ami, mais en vain. Il se résigne à espérer et
     profite de quelques années supplémentaires à vos côtés jusqu'à ce qu'il parte visiter un pays lointain.`,
     img: "images/bad_keith_ending.jpg",
-    options: [continuer9],
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(house_burning)",
+  },],
   },
 
   stevenAlive: {
@@ -278,23 +280,12 @@ let chaptersObj = {
     À un moment, vous préparez votre souper et votre four explose soudainement, vous tuant sur le coup.
     Étrangement, votre corps n'est jamais retrouvé.`,
     img: "images/house_burning.jpg",
-    options: [continuer1],
-  },
-
-  defendre: {
-    text: "le défendre",
-    action: "gotochapter(human_shield)",
-  },
-
-  aide: {
-    text: "chercher de l'aide",
-    action: "gotochapter(got_help)",
-  },
-
-  ignore: {
-    text: "le laisser mourir",
-    action: "gotochapter(run_away)",
-  },
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
+  }, 
 
   stevenAttack: {
     subtitle: "Attaque surprise!",
@@ -303,7 +294,19 @@ let chaptersObj = {
     Après avoir discuté un moment, vous remarquez des mouvements dans le boisé proche. Tout à coup, Steven
     sort de la forêt et attaque Geordo.`,
     img: "images/geordo_fight.jpg",
-    options: [defendre, aide, ignore],
+    options: [
+      {
+    text: "le défendre",
+    action: "gotochapter(human_shield)",
+  }, 
+  {
+    text: "chercher de l'aide",
+    action: "gotochapter(got_help)",
+  }, 
+  {
+    text: "le laisser mourir",
+    action: "gotochapter(run_away)",
+  },],
   },
 
   defend: {
@@ -312,7 +315,11 @@ let chaptersObj = {
     rapidement à plusieurs reprises et vous vous écroulez au sol. Vous voyez le prince profiter de l'ouverture
     pour vaincre l'agresseur avant de laisser s'échapper un dernier soupir.`,
     img: "images/human_shield.jpg",
-    options: [continuer1],
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(reveil)",
+  },],
   },
 
   geordeath2: {
@@ -321,12 +328,11 @@ let chaptersObj = {
     le coeur de Geordo. Il tombe à genoux, vous fixe d'un regard suppliant et s'effondre sur le sol, sans vie.
     Steven vous remercie de votre coopération et emporte le corps dans la fôret. Vous fuyez la scène paniqué/e.`,
     img: "images/run_away.jpg",
-    options: [continuer5],
-  },
-
-  continuer10: {
+    options: [
+      {
     text: "continuer",
-    action: "gotochapter(thankful)",
+    action: "gotochapter(new_friend)",
+  },],
   },
 
   seekHelp: {
@@ -337,18 +343,12 @@ let chaptersObj = {
     que vous avez apporté. Steven tombe au sol, couvert de blessures et lâche un dernier cri de désespoir
     avant de rendre l'âme.`,
     img: "images/got_help.jpg",
-    options: [continuer10],
-  },
-
-  flirter3: {
-    text: "flirter",
-    action: "gotochapter(final_ending)",
-  },
-
-  friend: {
-    text: "devenir son ami",
-    action: "gotochapter(geordo_ending)",
-  },
+    options: [
+      {
+    text: "continuer",
+    action: "gotochapter(thankful)",
+  },],
+  }, 
 
   thanks: {
     subtitle: "Un ami d'enfance",
@@ -356,10 +356,18 @@ let chaptersObj = {
     ainsi qu'un prince de la région voisine. Après s'être présenté, ce dernier vous offre ses remerciements.
     Vous discutez pendant de longues heures.`,
     img: "images/thankful.jpg",
-    options: [flirter3, friend],
+    options: [
+      {
+    text: "flirter",
+    action: "gotochapter(final_ending)",
+  }, 
+  {
+    text: "devenir son ami",
+    action: "gotochapter(geordo_ending)",
+  },],
   },
 
-  friendzone: {
+  /*friendzone: {
     subtitle: "Un amour princier",
     text: `Pendant les mois qui suivent, vous et Geordo tombez amoureux. Vous vous mariez avec le prince
     et passez le restant de vos jours à apprécier votre nouvelle vie de couple royal.`,
