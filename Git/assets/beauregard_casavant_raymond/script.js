@@ -8,15 +8,15 @@ let chaptersObj = {
     options: [
       {
       text: "flirter",
-      action: "gotochapter(`slave_ending`)",
+      action: "gotochapter(`slave`)",
     }, 
     {
       text: "faire connaissance",
-      action: "gotochapter(`discuss`)",
+      action: "gotochapter(`discuter`)",
     },
     {
       text: "insulter",
-      action: "gotochapter(`insult`)",
+      action: "gotochapter(`insulte`)",
     },],
   },
 
@@ -29,7 +29,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -42,7 +42,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(geordo_meet)",
+    action: "gotochapter(`meurtre`)",
   },],
   },
 
@@ -56,7 +56,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(geordo_fight)",
+    action: "gotochapter(`stevenAttack`)",
   },],
   },
 
@@ -70,11 +70,11 @@ let chaptersObj = {
     options: [
       {
     text: "flirter",
-    action: "gotochapter(fake_flirt)",
+    action: "gotochapter(`fauxflirt`)",
   },
    {
     text: "assassiner",
-    action: "gotochapter(geordo_murder)",
+    action: "gotochapter(`poignarde`)",
   },],
   },
 
@@ -88,7 +88,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -101,7 +101,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(opportunity)",
+    action: "gotochapter(`opportunite`)",
   },],
   },
 
@@ -114,15 +114,15 @@ let chaptersObj = {
     options: [
       {
     text: "poignarder",
-    action: "gotochapter(geordo_death_1)",
+    action: "gotochapter(`geordeath1`)",
   }, 
   {
     text: "le rejeter",
-    action: "gotochapter(geordo_suicide)",
+    action: "gotochapter(`cruelRefuse`)",
   }, 
   {
     text: "aimer en retour",
-    action: "gotochapter(steven_jealousy)",
+    action: "gotochapter(`jalousie`)",
   },],
   },
 
@@ -135,7 +135,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -148,7 +148,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(new_friend)",
+    action: "gotochapter(`keith`)",
   },],
   },
 
@@ -161,7 +161,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(weird_love)",
+    action: "gotochapter(`loveSteven`)",
   },],
   },
 
@@ -174,11 +174,11 @@ let chaptersObj = {
     options: [
       {
     text: "rejeter",
-    action: "gotochapter(steven_sadness)",
+    action: "gotochapter(`arracher`)",
   }, 
   {
     txt: "aimer en retour",
-    action: "gotochapter(ending_steven)",
+    action: "gotochapter(`finSteven`)",
   },],
   },
 
@@ -189,8 +189,8 @@ let chaptersObj = {
     img: "images/ending_steven.jpg",
     options: [
       {
-    text: "recommencer?",
-    action: "gotochapter(reveil)",
+    text: "recommencer",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -202,7 +202,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -215,7 +215,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(keith_love)",
+    action: "gotochapter(`keithLove`)",
   },],
   }, 
 
@@ -227,7 +227,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(dilemma)",
+    action: "gotochapter(`truthLie`)",
   },],
   },
 
@@ -240,11 +240,11 @@ let chaptersObj = {
     options: [
       {
     text: "avouer",
-    action: "gotochapter(brutal_death)",
+    action: "gotochapter(`truth`)",
   }, 
   {
     text: "mentir",
-    action: "gotochapter(bad_keith_ending)",
+    action: "gotochapter(`lie`)",
   },],
   },
 
@@ -257,7 +257,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -270,7 +270,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(house_burning)",
+    action: "gotochapter(`stevenAlive`)",
   },],
   },
 
@@ -283,7 +283,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   }, 
 
@@ -297,15 +297,15 @@ let chaptersObj = {
     options: [
       {
     text: "le défendre",
-    action: "gotochapter(human_shield)",
+    action: "gotochapter(`defend`)",
   }, 
   {
     text: "chercher de l'aide",
-    action: "gotochapter(got_help)",
+    action: "gotochapter(`seekHelp`)",
   }, 
   {
     text: "le laisser mourir",
-    action: "gotochapter(run_away)",
+    action: "gotochapter(`sacrifice`)",
   },],
   },
 
@@ -318,7 +318,7 @@ let chaptersObj = {
     options: [
       {
     text: "recommencer",
-    action: "gotochapter(reveil)",
+    action: "gotochapter(`reveil`)",
   },],
   },
 
@@ -331,7 +331,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(new_friend)",
+    action: "gotochapter(`keith`)",
   },],
   },
 
@@ -346,7 +346,7 @@ let chaptersObj = {
     options: [
       {
     text: "continuer",
-    action: "gotochapter(thankful)",
+    action: "gotochapter(thanks)",
   },],
   }, 
 
@@ -359,19 +359,24 @@ let chaptersObj = {
     options: [
       {
     text: "flirter",
-    action: "gotochapter(final_ending)",
+    action: "gotochapter(`ending`)",
   }, 
   {
     text: "devenir son ami",
-    action: "gotochapter(geordo_ending)",
+    action: "gotochapter(`friendzone`)",
   },],
   },
 
-  /*friendzone: {
+  friendzone: {
     subtitle: "Un amour princier",
     text: `Pendant les mois qui suivent, vous et Geordo tombez amoureux. Vous vous mariez avec le prince
     et passez le restant de vos jours à apprécier votre nouvelle vie de couple royal.`,
     img: "images/geordo_ending.jpg",
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(`reveil`)",
+  },],
   },
 
   ending: {
@@ -381,7 +386,12 @@ let chaptersObj = {
     
     Merci d'avoir joué à mon jeu! :)`,
     img: "images/final_ending.png",
-  },*/
+    options: [
+      {
+    text: "recommencer",
+    action: "gotochapter(`reveil`)",
+  },],
+  },
 };
 
 function gotochapter(chapterName) {
@@ -390,4 +400,3 @@ function gotochapter(chapterName) {
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].options);
 }
-
