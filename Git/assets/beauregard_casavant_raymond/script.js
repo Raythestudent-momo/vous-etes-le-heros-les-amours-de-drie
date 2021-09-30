@@ -1,27 +1,28 @@
 let chaptersObj = {
   reveil: {
-    flirter: {
-      text: "flirter",
-      action: "gotochapter(slave_ending)",
-    },
-
-    insulter: {
-      text: "insulter",
-      action: "gotochapter(insult)",
-    },
-
-    faireConnaissance: {
-      text: "faire connaissance",
-      action: "gotochapter(discuss)",
-    },
+ 
     subtitle: "Réveil",
     text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
     Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
     img: "images/steven_reveil.png",
-    options: [flirter, insulter, faireConnaissance],
+    options: [
+      {
+      text: "flirter",
+      action: "gotochapter(`slave_ending`)",
+    }, 
+    {
+      text: "faire connaissance",
+      action: "gotochapter(`discuss`)",
+    },
+    {
+      text: "insulter",
+      action: "gotochapter(`insult`)",
+    },
+  ],
+  
   },
 
-  continuer1: {
+  /*continuer1: {
     text: "continuer",
     action: "gotochapter(reveil)",
   },
@@ -379,13 +380,13 @@ let chaptersObj = {
     
     Merci d'avoir joué à mon jeu! :)`,
     img: "images/final_ending.png",
-  },
+  },*/
 };
 
 function gotochapter(chapterName) {
-  console.log(chapterName.subtitle);
-  console.log(chapterName.text);
-  console.log(chapterName.img);
-  console.log(chapterName.options);
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
+  console.log(chaptersObj[chapterName].img);
+  console.log(chaptersObj[chapterName].options);
 }
-gotochapter(reveil);
+gotochapter("reveil");
