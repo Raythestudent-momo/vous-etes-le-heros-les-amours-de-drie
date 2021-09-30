@@ -84,13 +84,19 @@ let meurtre = {
   options: [flirter2, assassiner],
 };
 
-let poignarder = {
+let poignarde = {
   subtitle: "À en perdre la tête!",
   text: `Vous tentez d'assassiner Geordo, mais à la seconde où
   vous sortez votre couteau, le sourire du prince disparaît et
   vous voyez soudainement le monde tourner. Votre tête touche le
   sol avant que vous vous rendiez compte de votre mort.`,
   img: "images/geordo_murder.jpg",
+  options: [continuer1],
+};
+
+let continuer4 = {
+  text: "continuer",
+  action: "gotochapter(opportunity)",
 };
 
 let fauxflirt = {
@@ -99,6 +105,22 @@ let fauxflirt = {
   vous croisez Steven qui vous rapelle votre travail. Un peu plus tard, vous 
   vous dirigez vous la demeure de Geordo le coeur lourd.`,
   img: "images/fake_flirt.jpg",
+  options: [continuer4],
+};
+
+let poignarder = {
+  text: "poignarder",
+  action: "gotochapter(geordo_death_1)",
+};
+
+let noLove = {
+  text: "le rejeter",
+  action: "gotochapter(geordo_suicide)",
+};
+
+let Love1 = {
+  text: "aimer en retour",
+  action: "gotochapter(steven_jealousy)",
 };
 
 let opportunite = {
@@ -107,6 +129,7 @@ let opportunite = {
   vous déclare son amour. Vous sentez un poids vous envahir alors que vous sentez
   le couteau contre votre cuisse, à portée de main.`,
   img: "images/opportunity.jpg",
+  options: [poignarder, noLove, Love1],
 };
 
 let jalousie = {
@@ -115,6 +138,12 @@ let jalousie = {
   que vous dormez à la belle étoile, enlacés, Steven sort de l'ombre. Avec un sourire
   machiavélique, ils vous poignarde tout les deux et disparaît dans la nuit en riant.`,
   img: "images/jealousy.jpg",
+  options: [continuer1],
+};
+
+let continuer5 = {
+  text: "continuer",
+  action: "gotochapter(new_friend)",
 };
 
 let geordeath1 = {
@@ -123,6 +152,12 @@ let geordeath1 = {
   du prince. Il s'écroule, serrant votre main et son regard laisse une étincelle de désespoir
   avant de s'éteindre à jamais.`,
   img: "images/stab.png",
+  options: [continuer5],
+};
+
+let continuer6 = {
+  text: "continuer",
+  action: "gotochapter(weird_love)",
 };
 
 let cruelRefuse = {
@@ -131,6 +166,17 @@ let cruelRefuse = {
   en silence et marche lentement vers la cuisine. Vous entendez un bruit sourd de corps qui tombe. Avec un
   sourire en coin et une larme à l'oeil, vous sortez rejoindre Steven qui vous attend plus loin.`,
   img: "images/geordo_suicide.png",
+  options: [continuer6],
+};
+
+let noLove2 = {
+  text: "rejeter",
+  action: "gotochapter(steven_sadness)",
+};
+
+let Love2 = {
+  txt: "aimer en retour",
+  action: "gotochapter(ending_steven)",
 };
 
 let loveSteven = {
@@ -139,7 +185,12 @@ let loveSteven = {
   Steven vous félicite, admiratif de votre cruauté envers Geordo, et vous demande de passer le restant de
   votre vie à ses côtés.`,
   img: "images/wierd_love.jpg",
-  options: [],
+  options: [noLove2, Love2],
+};
+
+let recommencer = {
+  text: "recommencer?",
+  action: "gotochapter(reveil)",
 };
 
 let finSteven = {
@@ -147,6 +198,7 @@ let finSteven = {
   text: `Vous prenez Steven dans vos bras et vous l'enlacez. Vous vous sauvez ensemble dans la nuit. Pour le
   reste de votre vie, vous et Steven parcourez le monde à la recherche de cibles à manipuler et assassiner.`,
   img: "images/ending_steven.jpg",
+  options: [recommencer],
 };
 
 let arracher = {
@@ -154,6 +206,12 @@ let arracher = {
   text: `Vous repoussez Steven. D'un mouvement fluide, il vous transperce la poitrine et retire votre coeur,
   pleurant à chaudes larmes, pour vous exprimer sa souffrance.`,
   img: "images/steven_sadness",
+  options: [continuer1],
+};
+
+let continuer7 = {
+  text: "continuer",
+  action: "gotochapter(keith_love)",
 };
 
 let keith = {
@@ -162,6 +220,12 @@ let keith = {
   pour le meurtre et il vous a enfin laissé tranquille. Entretemps, vous changez 
   de région pour vous faire oublier et vous vous liez d'amitié avec un ami de Geordo, Keith.`,
   img: "images/new_friend.png",
+  options: [continuer7],
+};
+
+let continuer8 = {
+  text: "continuer",
+  action: "gotochapter(dilemma)",
 };
 
 let keithLove = {
@@ -169,6 +233,17 @@ let keithLove = {
   text: `Après quelques temps, vous et Keith tombez en amour et vous invite à un banquet dans
   la région que vous venez de quitter. Vous hésitez, mais acceptez l'invitation avec un sourire forcé.`,
   img: "images/keith_love.png",
+  options: [continuer8],
+};
+
+let avouer = {
+  text: "avouer",
+  action: "gotochapter(brutal_death)",
+};
+
+let mentir = {
+  text: "mentir",
+  action: "gotochapter(bad_keith_ending)",
 };
 
 let truthLie = {
@@ -177,6 +252,7 @@ let truthLie = {
   que son ami d'enfance, Geordo, a été assassiné. Sachant que vous venez de cette région, il vous demande
   votre aide pour résoudre ce crime.`,
   img: "images/dilemma.jpg",
+  options: [avouer, mentir],
 };
 
 let truth = {
@@ -185,6 +261,12 @@ let truth = {
   et vous écoute jusqu'à la fin. Finalement, avec un soupir sanglotant de rage, il vous exécute
   brutalement sans procès.`,
   img: "images/brutal_death.jpg",
+  options: [continuer1],
+};
+
+let continuer9 = {
+  text: "continuer",
+  action: "gotochapter(house_burning)",
 };
 
 let lie = {
@@ -193,6 +275,7 @@ let lie = {
   de retrouver le responsable de la mort de son ami, mais en vain. Il se résigne à espérer et
   profite de quelques années supplémentaires à vos côtés jusqu'à ce qu'il parte visiter un pays lointain.`,
   img: "images/bad_keith_ending.jpg",
+  options: [continuer9],
 };
 
 let stevenAlive = {
@@ -201,6 +284,22 @@ let stevenAlive = {
   À un moment, vous préparez votre souper et votre four explose soudainement, vous tuant sur le coup.
   Étrangement, votre corps n'est jamais retrouvé.`,
   img: "images/house_burning.jpg",
+  options: [continuer1],
+};
+
+let defendre = {
+  text: "le défendre",
+  action: "gotochapter(human_shield)",
+};
+
+let aide = {
+  text: "chercher de l'aide",
+  action: "gotochapter(got_help)",
+};
+
+let ignore = {
+  text: "le laisser mourir",
+  action: "gotochapter(run_away)",
 };
 
 let stevenAttack = {
@@ -210,6 +309,7 @@ let stevenAttack = {
   Après avoir discuté un moment, vous remarquez des mouvements dans le boisé proche. Tout à coup, Steven
   sort de la forêt et attaque Geordo.`,
   img: "images/geordo_fight.jpg",
+  options: [defendre, aide, ignore],
 };
 
 let defend = {
@@ -218,6 +318,7 @@ let defend = {
   rapidement à plusieurs reprises et vous vous écroulez au sol. Vous voyez le prince profiter de l'ouverture
   pour vaincre l'agresseur avant de laisser s'échapper un dernier soupir.`,
   img: "images/human_shield.jpg",
+  options: [continuer1],
 };
 
 let geordeath2 = {
@@ -226,6 +327,12 @@ let geordeath2 = {
   le coeur de Geordo. Il tombe à genoux, vous regarde d'un regard suppliant et s'effondre sur le sol, sans vie.
   Steven vous remercie de votre coopération et emporte le corps dans la fôret. Vous fuyez la scène paniqué/e.`,
   img: "images/run_away.jpg",
+  options: [continuer5],
+};
+
+let continuer10 = {
+  text: "continuer",
+  action: "gotochapter(thankful)",
 };
 
 let seekHelp = {
@@ -236,6 +343,17 @@ let seekHelp = {
   que vous avez apporté. Steven tombe au sol, couvert de blessures et lâche un dernier cri de désespoir
   avant de rendre l'âme.`,
   img: "images/got_help.jpg",
+  options: [continuer10],
+};
+
+let flirter3 = {
+  text: "flirter",
+  action: "gotochapter(final_ending)",
+};
+
+let friend = {
+  text: "devenir son ami",
+  action: "gotochapter(geordo_ending)",
 };
 
 let thanks = {
@@ -244,6 +362,7 @@ let thanks = {
   ainsi qu'un prince de la région voisine. Après s'être présenté, ce dernier vous offre ses remerciements.
   Vous discutez pendant de longues heures.`,
   img: "images/thankful.jpg",
+  options: [flirter3, friend],
 };
 
 let friendzone = {
@@ -268,8 +387,9 @@ let chaptersObj = {
   insult: insulte,
   discuss: discuter,
   geordo_meet: meurtre,
-  geordo_murder: poignarder,
+  geordo_murder: poignarde,
   fake_flirt: fauxflirt,
+  opportunity: opportunite,
   steven_jealousy: jalousie,
   geordo_death_1: geordeath1,
   geordo_suicide: cruelRefuse,
@@ -295,4 +415,7 @@ function gotochapter(chapterName) {
   const chapitre = chapterName;
   console.log(chapitre.subtitle);
   console.log(chapitre.text);
+  console.log(chapitre.img);
+  console.log(chapitre.options);
 }
+gotochapter(reveil);
