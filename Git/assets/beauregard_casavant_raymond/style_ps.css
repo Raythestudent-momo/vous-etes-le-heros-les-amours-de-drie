@@ -27,7 +27,7 @@ body {
 .interface {
   background-color: #568ea3;
   width: 600px;
-  height: 500px;
+  min-height: 100px;
   align-self: center;
 }
 
@@ -64,6 +64,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 button {

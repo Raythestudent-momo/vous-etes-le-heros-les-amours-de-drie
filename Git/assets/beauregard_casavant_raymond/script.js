@@ -1,23 +1,23 @@
 let chaptersObj = {
   reveil: {
- 
     subtitle: "Réveil",
     text: `Lors de votre réveil, vous remarquez être dans une clairière verdoyante. 
     Tout d'un coup, un homme sort du couvert des bois, un couteau à la main et l'air menaçant.`,
     img: "images/steven_reveil.png",
     options: [
       {
-      text: "flirter",
-      action: "gotochapter(`slave`)",
-    }, 
-    {
-      text: "faire connaissance",
-      action: "gotochapter(`discuter`)",
-    },
-    {
-      text: "insulter",
-      action: "gotochapter(`insulte`)",
-    },],
+        text: "flirter",
+        action: "gotochapter(`slave`)",
+      },
+      {
+        text: "faire connaissance",
+        action: "gotochapter(`discuter`)",
+      },
+      {
+        text: "insulter",
+        action: "gotochapter(`insulte`)",
+      },
+    ],
   },
 
   slave: {
@@ -28,9 +28,10 @@ let chaptersObj = {
     img: "images/slave_ending.png",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   insulte: {
@@ -41,9 +42,10 @@ let chaptersObj = {
     img: "images/steven_2.jpg",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`meurtre`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`meurtre`)",
+      },
+    ],
   },
 
   discuter: {
@@ -55,9 +57,10 @@ let chaptersObj = {
     img: "images/steven_prudence.png",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`stevenAttack`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`stevenAttack`)",
+      },
+    ],
   },
 
   meurtre: {
@@ -69,13 +72,14 @@ let chaptersObj = {
     img: "images/geordo_meet.jpg",
     options: [
       {
-    text: "flirter",
-    action: "gotochapter(`fauxflirt`)",
-  },
-   {
-    text: "assassiner",
-    action: "gotochapter(`poignarde`)",
-  },],
+        text: "flirter",
+        action: "gotochapter(`fauxflirt`)",
+      },
+      {
+        text: "assassiner",
+        action: "gotochapter(`poignarde`)",
+      },
+    ],
   },
 
   poignarde: {
@@ -87,9 +91,10 @@ let chaptersObj = {
     img: "images/geordo_murder.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   fauxflirt: {
@@ -100,9 +105,10 @@ let chaptersObj = {
     img: "images/fake_flirt.jpg",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`opportunite`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`opportunite`)",
+      },
+    ],
   },
 
   opportunite: {
@@ -113,17 +119,18 @@ let chaptersObj = {
     img: "images/opportunity.jpg",
     options: [
       {
-    text: "poignarder",
-    action: "gotochapter(`geordeath1`)",
-  }, 
-  {
-    text: "le rejeter",
-    action: "gotochapter(`cruelRefuse`)",
-  }, 
-  {
-    text: "aimer en retour",
-    action: "gotochapter(`jalousie`)",
-  },],
+        text: "poignarder",
+        action: "gotochapter(`geordeath1`)",
+      },
+      {
+        text: "le rejeter",
+        action: "gotochapter(`cruelRefuse`)",
+      },
+      {
+        text: "aimer en retour",
+        action: "gotochapter(`jalousie`)",
+      },
+    ],
   },
 
   jalousie: {
@@ -134,9 +141,10 @@ let chaptersObj = {
     img: "images/jealousy.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   geordeath1: {
@@ -147,9 +155,10 @@ let chaptersObj = {
     img: "images/stab.png",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`keith`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`keith`)",
+      },
+    ],
   },
 
   cruelRefuse: {
@@ -160,9 +169,10 @@ let chaptersObj = {
     img: "images/geordo_suicide.png",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`loveSteven`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`loveSteven`)",
+      },
+    ],
   },
 
   loveSteven: {
@@ -173,13 +183,14 @@ let chaptersObj = {
     img: "images/wierd_love.jpg",
     options: [
       {
-    text: "rejeter",
-    action: "gotochapter(`arracher`)",
-  }, 
-  {
-    txt: "aimer en retour",
-    action: "gotochapter(`finSteven`)",
-  },],
+        text: "rejeter",
+        action: "gotochapter(`arracher`)",
+      },
+      {
+        txt: "aimer en retour",
+        action: "gotochapter(`finSteven`)",
+      },
+    ],
   },
 
   finSteven: {
@@ -189,9 +200,10 @@ let chaptersObj = {
     img: "images/ending_steven.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   arracher: {
@@ -201,9 +213,10 @@ let chaptersObj = {
     img: "images/steven_sadness",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   keith: {
@@ -214,10 +227,11 @@ let chaptersObj = {
     img: "images/new_friend.png",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`keithLove`)",
-  },],
-  }, 
+        text: "continuer",
+        action: "gotochapter(`keithLove`)",
+      },
+    ],
+  },
 
   keithLove: {
     subtitle: "En amour de nouveau",
@@ -226,9 +240,10 @@ let chaptersObj = {
     img: "images/keith_love.png",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`truthLie`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`truthLie`)",
+      },
+    ],
   },
 
   truthLie: {
@@ -239,13 +254,14 @@ let chaptersObj = {
     img: "images/dilemma.jpg",
     options: [
       {
-    text: "avouer",
-    action: "gotochapter(`truth`)",
-  }, 
-  {
-    text: "mentir",
-    action: "gotochapter(`lie`)",
-  },],
+        text: "avouer",
+        action: "gotochapter(`truth`)",
+      },
+      {
+        text: "mentir",
+        action: "gotochapter(`lie`)",
+      },
+    ],
   },
 
   truth: {
@@ -256,9 +272,10 @@ let chaptersObj = {
     img: "images/brutal_death.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   lie: {
@@ -269,9 +286,10 @@ let chaptersObj = {
     img: "images/bad_keith_ending.jpg",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`stevenAlive`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`stevenAlive`)",
+      },
+    ],
   },
 
   stevenAlive: {
@@ -282,10 +300,11 @@ let chaptersObj = {
     img: "images/house_burning.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
-  }, 
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
+  },
 
   stevenAttack: {
     subtitle: "Attaque surprise!",
@@ -296,17 +315,18 @@ let chaptersObj = {
     img: "images/geordo_fight.jpg",
     options: [
       {
-    text: "le défendre",
-    action: "gotochapter(`defend`)",
-  }, 
-  {
-    text: "chercher de l'aide",
-    action: "gotochapter(`seekHelp`)",
-  }, 
-  {
-    text: "le laisser mourir",
-    action: "gotochapter(`sacrifice`)",
-  },],
+        text: "le défendre",
+        action: "gotochapter(`defend`)",
+      },
+      {
+        text: "chercher de l'aide",
+        action: "gotochapter(`seekHelp`)",
+      },
+      {
+        text: "le laisser mourir",
+        action: "gotochapter(`sacrifice`)",
+      },
+    ],
   },
 
   defend: {
@@ -317,9 +337,10 @@ let chaptersObj = {
     img: "images/human_shield.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   geordeath2: {
@@ -330,9 +351,10 @@ let chaptersObj = {
     img: "images/run_away.jpg",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(`keith`)",
-  },],
+        text: "continuer",
+        action: "gotochapter(`keith`)",
+      },
+    ],
   },
 
   seekHelp: {
@@ -345,10 +367,11 @@ let chaptersObj = {
     img: "images/got_help.jpg",
     options: [
       {
-    text: "continuer",
-    action: "gotochapter(thanks)",
-  },],
-  }, 
+        text: "continuer",
+        action: "gotochapter(thanks)",
+      },
+    ],
+  },
 
   thanks: {
     subtitle: "Un ami d'enfance",
@@ -358,13 +381,14 @@ let chaptersObj = {
     img: "images/thankful.jpg",
     options: [
       {
-    text: "flirter",
-    action: "gotochapter(`ending`)",
-  }, 
-  {
-    text: "devenir son ami",
-    action: "gotochapter(`friendzone`)",
-  },],
+        text: "flirter",
+        action: "gotochapter(`ending`)",
+      },
+      {
+        text: "devenir son ami",
+        action: "gotochapter(`friendzone`)",
+      },
+    ],
   },
 
   friendzone: {
@@ -374,29 +398,33 @@ let chaptersObj = {
     img: "images/geordo_ending.jpg",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 
   ending: {
     subtitle: "D'une pierre deux coups!",
-    text: `Vous tombez amoureux tous les trois et formez une alliance entre les deux régions,
-    devenant le premier trouple royal. Vous vivez heureux jusqu'à la fin de vos jours.
-    
+    text: `Vous tombez amoureux tous les trois et formez une alliance entre les deux régions, devenant le premier trouple royal. Vous vivez heureux jusqu'à la fin de vos jours.
     Merci d'avoir joué à mon jeu! :)`,
-    img: "images/final_ending.png",
+    img: "images/keith_geordo.png",
     options: [
       {
-    text: "recommencer",
-    action: "gotochapter(`reveil`)",
-  },],
+        text: "recommencer",
+        action: "gotochapter(`reveil`)",
+      },
+    ],
   },
 };
 
 function gotochapter(chapterName) {
-  console.log(chaptersObj[chapterName].subtitle);
-  console.log(chaptersObj[chapterName].text);
-  console.log(chaptersObj[chapterName].img);
-  console.log(chaptersObj[chapterName].options);
+  let chapter = document.querySelector(".chapter");
+  let text = document.querySelector(".txt");
+  let image = document.querySelector(".img");
+  let button1 = document.querySelector(".button1");
+  chapter.innerText = chaptersObj[chapterName].subtitle;
+  text.innerText = chaptersObj[chapterName].text;
+  image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+  button1.innerHTML = `<button type="button">${chaptersObj[chapterName].options[0].text}</button>`;
 }
