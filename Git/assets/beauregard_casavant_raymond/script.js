@@ -422,9 +422,20 @@ function gotochapter(chapterName) {
   let chapter = document.querySelector(".chapter");
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
-  let button1 = document.querySelector(".button1");
+  let buttons1 = document.querySelector(".buttons1");
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
   image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
-  button1.innerHTML = `<button type="button">${chaptersObj[chapterName].options[0].text}</button>`;
+  buttons1.innerHTML = `<button type="button">${chaptersObj[chapterName].options[0].text}</button>`;
+  function click1() {
+    for (
+      let index = 0;
+      index < chaptersObj[chapterName].options.length;
+      index++
+    ) {
+      const choice = chaptersObj[chapterName].options[index].action;
+      console.log(choice);
+    }
+  }
+  buttons1.onclick = click1();
 }
