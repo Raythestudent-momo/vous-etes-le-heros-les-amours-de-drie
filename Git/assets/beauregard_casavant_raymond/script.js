@@ -1,3 +1,4 @@
+let stevenDead = false;
 let chaptersObj = {
   reveil: {
     subtitle: "Réveil",
@@ -287,7 +288,7 @@ let chaptersObj = {
     options: [
       {
         text: "continuer",
-        action: "gotochapter(`stevenAlive`)",
+        action: "deadOrAlive2()",
       },
     ],
   },
@@ -382,7 +383,7 @@ let chaptersObj = {
     options: [
       {
         text: "flirter",
-        action: "gotochapter(`ending`)",
+        action: "deadOrAlive2()",
       },
       {
         text: "devenir son ami",
@@ -415,6 +416,16 @@ let chaptersObj = {
         action: "gotochapter(`reveil`)",
       },
     ],
+  },
+  deadOrAlive1: function () {
+    stevenDead = true;
+  },
+  deadOrAlive2: function () {
+    if ((stevenDead = true)) {
+      gotochapter("ending");
+    } else {
+      gotochapter("stevenAlive");
+    }
   },
 };
 
