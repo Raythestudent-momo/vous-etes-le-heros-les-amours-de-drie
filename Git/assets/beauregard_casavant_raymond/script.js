@@ -253,7 +253,7 @@ let chaptersObj = {
     options: [
       {
         text: "continuer",
-        action: "deadOrAlive2()",
+        action: "gotochapter('ending')",
       },
     ],
   },
@@ -333,7 +333,7 @@ let chaptersObj = {
     options: [
       {
         text: "flirter",
-        action: "deadOrAlive2()",
+        action: "gotochapter('ending')",
       },
       {
         text: "devenir son ami",
@@ -366,7 +366,7 @@ let chaptersObj = {
       },
     ],
   },
-  deadOrAlive1: function () {
+  /*deadOrAlive1: function () {
     stevenDead = true;
   },
   deadOrAlive2: function () {
@@ -375,7 +375,7 @@ let chaptersObj = {
     } else {
       gotochapter("stevenAlive");
     }
-  },
+  },*/
 };
 
 function gotochapter(chapterName) {
@@ -386,18 +386,17 @@ function gotochapter(chapterName) {
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
   image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
-  buttons1.innerHTML = `<button type="button" onclick="click1()">${chaptersObj[chapterName].options[0].text}</button>`;
-  function click1() {
+  buttons1.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[0].text}</button>`;
+  buttons1.onclick = function () {
     for (
       let index = 0;
       index < chaptersObj[chapterName].options.length;
       index++
     ) {
-      const choice = chaptersObj[chapterName].options[index].action;
-      console.log(choice);
+      const choice = chaptersObj[chapterName].options[index].action; /*[0]*/
+      console.log(`${choice}`);
       //gotochapter(choice);
     }
-  }
-  buttons1.onclick = click1();
+  };
 }
 gotochapter("reveil");
