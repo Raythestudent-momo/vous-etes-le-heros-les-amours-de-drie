@@ -393,9 +393,10 @@ function gotochapter(chapterName) {
       index < chaptersObj[chapterName].options.length;
       index++
     ) {
-      const choice = chaptersObj[chapterName].options[index].action; /*[0]*/
+      const choice = chaptersObj[chapterName].options[0].action;
       console.log(`${choice}`);
       //gotochapter(choice);
+      break;
     }
   };
 }
