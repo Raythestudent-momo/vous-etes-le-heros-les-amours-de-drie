@@ -383,6 +383,8 @@ function gotochapter(chapterName) {
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let buttons1 = document.querySelector(".buttons1");
+  let buttons2 = document.querySelector(".buttons2");
+  let buttons3 = document.querySelector(".buttons3");
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
   image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
@@ -399,5 +401,37 @@ function gotochapter(chapterName) {
       break;
     }
   };
+  /*buttons2.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[1].text}</button>`;
+  buttons2.onclick = function () {
+    for (
+      let index = 0;
+      index < chaptersObj[chapterName].options.length;
+      index++
+    ) {
+      const choice = chaptersObj[chapterName].options[1].action;
+      if (!choice) {
+      } else {
+        console.log(`${choice}`);
+        //gotochapter(choice);
+        break;
+      }
+    }
+  };
+  buttons3.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[2].text}</button>`;
+  buttons3.onclick = function () {
+    for (
+      let index = 0;
+      index < chaptersObj[chapterName].options.length;
+      index++
+    ) {
+      const choice = chaptersObj[chapterName].options[2].action;
+      if (!choice) {
+      } else {
+        console.log(`${choice}`);
+        //gotochapter(choice);
+        break;
+      }
+    }
+  };*/
 }
 gotochapter("reveil");
