@@ -1,4 +1,4 @@
-let stevenDead = false;
+let stevenDead = 0;
 let chaptersObj = {
   reveil: {
     subtitle: "Réveil",
@@ -321,7 +321,7 @@ let chaptersObj = {
     options: [
       {
         text: "continuer",
-        action: "gotochapter(thanks)",
+        action: "gotochapter(`thanks`)",
       },
     ],
   },
@@ -367,7 +367,7 @@ let chaptersObj = {
     ],
   },
   /*deadOrAlive1: function () {
-    stevenDead = true;
+    stevenDead++;
   },
   deadOrAlive2: function () {
     if ((stevenDead = true)) {
@@ -382,56 +382,24 @@ function gotochapter(chapterName) {
   let chapter = document.querySelector(".chapter");
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
-  let buttons1 = document.querySelector(".buttons1");
-  let buttons2 = document.querySelector(".buttons2");
-  let buttons3 = document.querySelector(".buttons3");
+  let choices = document.querySelector(".choices");
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
   image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
-  buttons1.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[0].text}</button>`;
-  buttons1.onclick = function () {
-    for (
+  //button.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[0].text}</button>`;
+  //button.onclick = function () {
+  let txtButton = '';  
+  for (
       let index = 0;
       index < chaptersObj[chapterName].options.length;
       index++
     ) {
-      const choice = chaptersObj[chapterName].options[0].action;
-      console.log(`${choice}`);
+      const choice = chaptersObj[chapterName].options[index].action;
+      txtButton += `<div class="button"><button type="button" onclick="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button></div>`;
+      //console.log(`${choice}`);
       //gotochapter(choice);
-      break;
     }
-  };
-  /*buttons2.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[1].text}</button>`;
-  buttons2.onclick = function () {
-    for (
-      let index = 0;
-      index < chaptersObj[chapterName].options.length;
-      index++
-    ) {
-      const choice = chaptersObj[chapterName].options[1].action;
-      if (!choice) {
-      } else {
-        console.log(`${choice}`);
-        //gotochapter(choice);
-        break;
-      }
-    }
-  };
-  buttons3.innerHTML = `<button type="button" onclick="">${chaptersObj[chapterName].options[2].text}</button>`;
-  buttons3.onclick = function () {
-    for (
-      let index = 0;
-      index < chaptersObj[chapterName].options.length;
-      index++
-    ) {
-      const choice = chaptersObj[chapterName].options[2].action;
-      if (!choice) {
-      } else {
-        console.log(`${choice}`);
-        //gotochapter(choice);
-        break;
-      }
-    }
-  };*/
+    choices.innerHTML = txtButton;
+  //};
 }
 gotochapter("reveil");
