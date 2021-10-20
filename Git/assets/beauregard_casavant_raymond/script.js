@@ -4,7 +4,7 @@ let stevenDead = 0;
   gotochapter(`thanks`);
 }),
   (deadOrAlive2 = function () {
-    if (stevenDead == true) {
+    if (stevenDead > 0) {
       gotochapter(`ending`);
     } else {
       gotochapter(`stevenAlive`);
