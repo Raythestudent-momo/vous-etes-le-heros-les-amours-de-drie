@@ -10,6 +10,10 @@ let stevenDead = 0;
       gotochapter(`stevenAlive`);
     }
   });
+reset = function () {
+  stevenDead--;
+  gotochapter(`reveil`);
+};
 let chaptersObj = {
   reveil: {
     subtitle: "Réveil",
@@ -196,7 +200,7 @@ let chaptersObj = {
   arracher: {
     subtitle: "une peine déchirante!",
     text: `Vous repoussez Steven. D'un mouvement fluide, il vous transperce la poitrine et retire votre coeur, pleurant à chaudes larmes, pour vous exprimer sa souffrance.`,
-    img: "images/steven_sadness",
+    img: "images/steven_sadness.jpg",
     options: [
       {
         text: "recommencer",
@@ -360,7 +364,7 @@ let chaptersObj = {
     options: [
       {
         text: "recommencer",
-        action: "gotochapter(`reveil`)",
+        action: "reset()",
       },
     ],
   },
@@ -373,7 +377,7 @@ let chaptersObj = {
     options: [
       {
         text: "recommencer",
-        action: "gotochapter(`reveil`)",
+        action: "reset()",
       },
     ],
   },
