@@ -1,19 +1,23 @@
-let stevenDead = 0;
-(deadOrAlive1 = function () {
-  stevenDead++;
+let stevenDead = false;
+
+function deadOrAlive1() {
+  stevenDead = true;
   gotochapter(`thanks`);
-}),
-  (deadOrAlive2 = function () {
-    if (stevenDead > 0) {
-      gotochapter(`ending`);
-    } else {
-      gotochapter(`stevenAlive`);
-    }
-  });
-reset = function () {
-  stevenDead--;
+}
+
+function deadOrAlive2() {
+  if (stevenDead === true) {
+    gotochapter(`ending`);
+  } else {
+    gotochapter(`stevenAlive`);
+  }
+}
+
+function reset() {
+  stevenDead = false;
   gotochapter(`reveil`);
-};
+}
+
 let chaptersObj = {
   reveil: {
     subtitle: "Réveil",
@@ -388,18 +392,17 @@ function gotochapter(chapterName) {
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
+
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
   image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+
   let txtButton = "";
-  for (
-    let index = 0;
-    index < chaptersObj[chapterName].options.length;
-    index++
-  ) {
-    const choice = chaptersObj[chapterName].options[index].action;
-    txtButton += `<div class="button"><button type="button" onclick="${chaptersObj[chapterName].options[index].action}">${chaptersObj[chapterName].options[index].text}</button></div>`;
+  for (let index = 0; index < chaptersObj[chapterName].options.length; index++) {
+    const option = chaptersObj[chapterName].options[index];
+    txtButton += `<div class="button"><button onclick="${option.action}">${option.text}</button></div>`;
   }
   choices.innerHTML = txtButton;
 }
+
 gotochapter("reveil");
