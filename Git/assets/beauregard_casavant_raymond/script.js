@@ -2,6 +2,7 @@ let stevenDead = false;
 
 function deadOrAlive1() {
   stevenDead = true;
+  localStorage.setItem("key", `${stevenDead}`);
   gotochapter(`thanks`);
 }
 
@@ -15,6 +16,7 @@ function deadOrAlive2() {
 
 function reset() {
   stevenDead = false;
+  localStorage.setItem("key", `${stevenDead}`);
   gotochapter(`reveil`);
 }
 
@@ -390,11 +392,14 @@ let chaptersObj = {
 };
 
 function gotochapter(chapterName) {
+  console.log(chapterName);
   let chapter = document.querySelector(".chapter");
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
   const transition = new Audio("fx/transition.mp3");
+
+  localStorage.setItem("chapter", `${chapterName}`);
 
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
@@ -417,7 +422,12 @@ function gotochapter(chapterName) {
   choices.addEventListener("click", function () {
     transition.play();
   });
-  transition.currentTime(0);
 }
-
-gotochapter("reveil");
+let save = "";
+if (save != undefined) {
+  save = localStorage.getItem("chapter");
+  gotochapter(save);
+  localStorage.getItem("key", `${stevenDead}`);
+} else {
+  gotochapter("reveil");
+}
