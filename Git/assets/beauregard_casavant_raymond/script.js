@@ -417,6 +417,7 @@ function gotochapter(chapterName) {
   choices.addEventListener("click", function () {
     transition.play();
   });
+  transition.currentTime(0);
 }
 
 gotochapter("reveil");
