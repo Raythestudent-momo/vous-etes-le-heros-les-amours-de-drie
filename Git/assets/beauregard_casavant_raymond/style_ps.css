@@ -52,6 +52,12 @@ img {
   align-self: center;
 }
 
+video {
+  margin-top: 10px;
+  margin-left: 50px;
+  align-self: center;
+}
+
 .txt {
   font-family: "noto";
   font-size: medium;

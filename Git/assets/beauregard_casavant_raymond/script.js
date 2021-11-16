@@ -394,11 +394,12 @@ function gotochapter(chapterName) {
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
+  const transition = new Audio("fx/transition.mp3");
 
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
-  if (chaptersObj[chapterName].video === true) {
-    image.innerHTML = `<video src="${chaptersObj[chapterName].video}" alt="chapter_video" /video>`;
+  if (chaptersObj[chapterName].video != undefined) {
+    image.innerHTML = `<video src="${chaptersObj[chapterName].video}" autoplay loop muted></video>`;
   } else {
     image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
   }
@@ -413,6 +414,9 @@ function gotochapter(chapterName) {
     txtButton += `<div class="button"><button onclick="${option.action}">${option.text}</button></div>`;
   }
   choices.innerHTML = txtButton;
+  choices.addEventListener("click", function () {
+    transition.play();
+  });
 }
 
 gotochapter("reveil");
