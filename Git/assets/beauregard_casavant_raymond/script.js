@@ -256,6 +256,7 @@ let chaptersObj = {
   truth: {
     subtitle: "La parole est d'argent, mais le silence est d'or",
     text: `Vous dites la vérité. Keith, écoutant vos aveux, tire lentement son épée de son fourreau et vous écoute jusqu'à la fin. Finalement, avec un soupir sanglotant de rage, il vous exécute brutalement sans procès.`,
+    video: "images/brutal_death.mp4",
     img: "images/brutal_death.jpg",
     options: [
       {
@@ -280,6 +281,7 @@ let chaptersObj = {
   stevenAlive: {
     subtitle: "Trop beau pour être vrai",
     text: `Alors que Keith est parti, vous prenez soin de sa demeure et vaquez à vos occupations. À un moment, vous préparez votre souper et votre four explose soudainement, vous tuant sur le coup. Étrangement, votre corps n'est jamais retrouvé.`,
+    video: "images/house_burning.mp4",
     img: "images/house_burning.jpg",
     options: [
       {
@@ -395,10 +397,18 @@ function gotochapter(chapterName) {
 
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
-  image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+  if (chaptersObj[chapterName].video === true) {
+    image.innerHTML = `<video src="${chaptersObj[chapterName].video}" alt="chapter_video" /video>`;
+  } else {
+    image.innerHTML = `<img src="${chaptersObj[chapterName].img}" alt="chapter_img" />`;
+  }
 
   let txtButton = "";
-  for (let index = 0; index < chaptersObj[chapterName].options.length; index++) {
+  for (
+    let index = 0;
+    index < chaptersObj[chapterName].options.length;
+    index++
+  ) {
     const option = chaptersObj[chapterName].options[index];
     txtButton += `<div class="button"><button onclick="${option.action}">${option.text}</button></div>`;
   }
