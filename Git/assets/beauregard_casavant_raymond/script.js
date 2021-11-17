@@ -391,13 +391,14 @@ let chaptersObj = {
   },
 };
 
+const transition = new Audio("fx/transition.mp3");
+
 function gotochapter(chapterName) {
   console.log(chapterName);
   let chapter = document.querySelector(".chapter");
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
-  const transition = new Audio("fx/transition.mp3");
 
   localStorage.setItem("chapter", `${chapterName}`);
 
