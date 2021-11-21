@@ -1,8 +1,11 @@
 let stevenDead = false;
+if (localStorage.getItem("key") != null) { // Est-ce que keyf est sauvegardé dans localStorage?
+  stevenDead = localStorage.getItem("key"); // Si oui, donnons la valeur à key à stevenDead
+}
 
 function deadOrAlive1() {
   stevenDead = true;
-  localStorage.setItem("key", `${stevenDead}`);
+  localStorage.setItem("key", stevenDead);
   gotochapter(`thanks`);
 }
 
@@ -16,7 +19,7 @@ function deadOrAlive2() {
 
 function reset() {
   stevenDead = false;
-  localStorage.setItem("key", `${stevenDead}`);
+  localStorage.setItem("key", stevenDead);
   gotochapter(`reveil`);
 }
 
@@ -400,7 +403,7 @@ function gotochapter(chapterName) {
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
 
-  localStorage.setItem("chapter", `${chapterName}`);
+  localStorage.setItem("chapter", chapterName);
 
   chapter.innerText = chaptersObj[chapterName].subtitle;
   text.innerText = chaptersObj[chapterName].text;
@@ -420,15 +423,13 @@ function gotochapter(chapterName) {
     txtButton += `<div class="button"><button onclick="${option.action}">${option.text}</button></div>`;
   }
   choices.innerHTML = txtButton;
-  choices.addEventListener("click", function () {
-    transition.play();
-  });
+
+  transition.currentTime = 0; // Remettre le son au début
+  transition.play(); // Jouer le son
 }
-let save = "";
-if (save != undefined) {
-  save = localStorage.getItem("chapter");
-  gotochapter(save);
-  localStorage.getItem("key", `${stevenDead}`);
-} else {
-  gotochapter("reveil");
+
+let currentchapter = 'reveil'; // Chapitre de départ par défaut
+if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
+  currentchapter = localStorage.getItem("chapter") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
+gotochapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
