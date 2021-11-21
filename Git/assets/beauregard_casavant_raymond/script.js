@@ -432,4 +432,4 @@ let currentchapter = 'reveil'; // Chapitre de départ par défaut
 if (localStorage.getItem("chapter") != null) { // Est-ce qu'un chapitre est sauvegardé dans localStorage?
   currentchapter = localStorage.getItem("chapter") // Si oui, changeons le chapitre de départ pour le chapitre sauvegardé
 }
-goToChapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
+gotochapter(currentchapter); // Débutons le jeu au chapitre qui fait le plus de sens (départ ou sauvegardé)
