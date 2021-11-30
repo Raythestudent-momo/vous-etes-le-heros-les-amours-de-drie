@@ -411,6 +411,8 @@ let chaptersObj = {
 };
 
 const transition = new Audio("fx/transition.mp3");
+const poly = new Audio("fx/ending.mp3");
+const wedding = new Audio("fx/wedding.mp3");
 const body = document.querySelector("body");
 
 function gotochapter(chapterName) {
@@ -421,10 +423,6 @@ function gotochapter(chapterName) {
   let choices = document.querySelector(".choices");
 
   body.className = chapterName;
-  if (body.classList.contains("ending")) {
-    body.style.backgroundColor = "";
-    body.style.backgroundImage = "images/hearts.mp4";
-  }
 
   localStorage.setItem("chapter", chapterName);
 
@@ -446,9 +444,17 @@ function gotochapter(chapterName) {
     txtButton += `<div class="button"><button onclick="${option.action}">${option.text}</button></div>`;
   }
   choices.innerHTML = txtButton;
-
-  transition.currentTime = 0; // Remettre le son au début
-  transition.play(); // Jouer le son
+  if (body.classList.contains("ending")) {
+    poly.currentTime = 0;
+    poly.play();
+    console.log(poly);
+  } else if (body.classList.contains("friendzone")) {
+    wedding.currentTime = 0;
+    wedding.play();
+  } else {
+    transition.currentTime = 0; // Remettre le son au début
+    transition.play(); // Jouer le son
+  }
 }
 
 let currentchapter = "reveil"; // Chapitre de départ par défaut
