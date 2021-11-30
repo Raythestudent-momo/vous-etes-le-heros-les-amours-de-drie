@@ -75,7 +75,7 @@ video {
 
 button {
   border: none;
-  padding: 5px 5px;
+  padding: 10px 10px;
   text-align: center;
   display: inline-block;
   font-family: "nato";
@@ -87,4 +87,10 @@ button {
 
 button:hover {
   background-color: #cebacf;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
 }
