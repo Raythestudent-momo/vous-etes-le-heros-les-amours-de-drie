@@ -411,6 +411,7 @@ let chaptersObj = {
 };
 
 const transition = new Audio("fx/transition.mp3");
+const body = document.querySelector("body");
 
 function gotochapter(chapterName) {
   console.log(chapterName);
@@ -418,6 +419,12 @@ function gotochapter(chapterName) {
   let text = document.querySelector(".txt");
   let image = document.querySelector(".img");
   let choices = document.querySelector(".choices");
+
+  body.className = chapterName;
+  if (body.classList.contains("ending")) {
+    body.style.backgroundColor = "";
+    body.style.backgroundImage = "images/hearts.mp4";
+  }
 
   localStorage.setItem("chapter", chapterName);
 
