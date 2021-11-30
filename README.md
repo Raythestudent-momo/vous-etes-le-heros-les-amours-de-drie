@@ -8,6 +8,7 @@
 
 **Palette de couleurs** : [coolors.co](https://coolors.co/5b3758-c5dca0-568ea3-68c3d4-cebacf)
 
+**en ligne** : [Les amours de Drie](https://raythestudent-momo.github.io/vous-etes-le-heros-les-amours-de-drie/)
 ## Diagramme
 
 ![Diagramme](/Git/assets/synopsis_shema.png)
